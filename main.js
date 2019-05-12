@@ -75,7 +75,7 @@ function getOneData() {
       // 抓取 one 图片
       const img = $('.carousel-inner>.item>img, .carousel-inner>.item>a>img').eq(0).attr('src');
       // 抓取 one 文本
-      const text = $('.fp-one .fp-one-cita-wrapper .fp-one-cita a').text();
+      const text = $('.fp-one .fp-one-cita-wrapper .fp-one-cita a').eq(0).text();
       const oneData = {
         img,
         text
@@ -115,10 +115,10 @@ async function renderTemplate () {
 
 // 6.0 定时每天5时20分13秒发送邮件给女朋友
 // 6.2 创建定时任务
-// var j = schedule.scheduleJob('5 * * * * *', function(){
-//   sendNodeMail();
-//   console.log('邮件发送成功');
-// });
+var j = schedule.scheduleJob('0 0 9 * * *', function(){
+  sendNodeMail();
+  console.log('邮件发送成功');
+});
 
 // 5.0 发送邮件
 async function sendNodeMail() {
@@ -139,7 +139,8 @@ async function sendNodeMail() {
   // 设置电子邮件数据
   let mailOptions = {
       from: '"帅气的小哥哥" <kuangsixiang@qq.com>', // 发件人邮箱
-      to: "kuangsixiang@163.com", // 收件人列表
+      // to: "kuangsixiang@163.com", // 收件人列表
+      to: "kuangsixiang@163.com,yfflorence@hotmail.com", // 收件人列表
       subject: "love-email", // 标题
       html: html // html 内容
   };
