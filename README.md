@@ -362,3 +362,9 @@ schedule.scheduleJob("14 20 5 * * *", function() {
 
 ```
 
+#  运行
+
+DOS 窗口运行 node main.js
+
+
+
