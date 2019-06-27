@@ -17,7 +17,7 @@ function getDayData () {
     // 现在的时间
     const today = new Date();
     // 交往的时间
-    const meet = new Date('2017-10-30');
+    const meet = new Date('xxxx-xx-xx'); // 填入时间
     // 计算相识到今天的天数
     const count = Math.ceil((today - meet) / 1000 / 60 / 60 / 24);
     // console.log(count);
@@ -131,16 +131,16 @@ async function sendNodeMail() {
       port: 465,
       secure: true, // 开启加密协议，需要使用 465 端口号
       auth: {
-          user: "kuangsixiang@qq.com", // 用户名
-          pass: "cwhffeqljcfebgec" // 客户端授权密码
+          user: "xxxxxx@qq.com", // 邮箱
+          pass: "xxxxxxxxxxxxx" // 客户端授权密码
       }
   });
 
   // 设置电子邮件数据
   let mailOptions = {
-      from: '"帅气的小哥哥" <kuangsixiang@qq.com>', // 发件人邮箱
-      // to: "kuangsixiang@163.com", // 收件人列表
-      to: "kuangsixiang@163.com,yfflorence@hotmail.com", // 收件人列表
+      from: '"帅气的小哥哥" <xxxxxxxxxxx@qq.com>', // 发件人邮箱
+      // to: "xxxxxxxxx@163.com", // 收件人列表
+      to: "xxxxxx@163.com,xxxxxx@hotmail.com", // 收件人列表
       subject: "love-email", // 标题
       html: html // html 内容
   };
