@@ -147,15 +147,15 @@ async function sendNodeMail() {
         port: 465,
         secure: true, // 开启加密协议，需要使用 465 端口号
         auth: {
-            user: "gzqd201802@163.com", // 用户名
-            pass: "1234qwer" // 授权密码
+            user: "123123123@163.com", // 用户名
+            pass: "xxxxxxxx" // 授权密码
         }
     });
 
     // 设置电子邮件数据
     let mailOptions = {
-        from: '"广州传智播客前端" <gzqd201802@163.com>', // 发件人邮箱
-        to: "gzqd201803@163.cn", // 收件人列表
+        from: '"帅气的小哥哥" <123123123123@163.com>', // 发件人邮箱
+        to: "123123213@163.cn", // 收件人列表
         subject: "一封爱的邮件", // 标题
         html: html // html 内容
     };
